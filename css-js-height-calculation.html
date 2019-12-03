@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<style type="text/css">
+		body {
+		  background-color: #333;
+		}
+
+		.module {
+		  height: 80vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+		  height: calc(var(--vh, 1vh) * 100);
+		  margin: 0 auto;
+		  max-width: 30%;
+		}
+
+		.module__item {
+		  align-items: center;
+		  display: flex;
+		  height: 20%;
+		  justify-content: center;
+		}
+
+		.module__item:nth-child(odd) {
+		  background-color: #fff;
+		  color: #F73859;
+		}
+
+		.module__item:nth-child(even) {
+		  background-color: #F73859;
+		  color: #F1D08A;
+		}		
+	</style>
+</head>
+<body>
+	<div class="module">
+		<div class="module__item">20%</div>
+		<div class="module__item">40%</div>
+		<div class="module__item">60%</div>
+		<div class="module__item">80%</div>
+		<div class="module__item">100%</div>
+	</div>
+</body>
+	<script type="text/javascript">
+		/*window.addEventListener('resize', () => {
+		  let vh = window.innerHeight * 0.01;
+		  let vh1 = window.innerHeight;
+		  console.log('vh---------'+vh);
+		  console.log('vh1---------'+vh1);
+		
+		  document.documentElement.style.setProperty('--vh', vh+"px");
+		});*/
+
+		window.addEventListener('resize', function(){
+		  let vh = window.innerHeight * 0.01;
+		  let vh1 = window.innerHeight;
+		  console.log('vh---------'+vh);
+		  console.log('vh1---------'+vh1);
+		
+		  document.documentElement.style.setProperty('--vh', vh+"px");
+
+		}, true)
+	</script>
+</html>
